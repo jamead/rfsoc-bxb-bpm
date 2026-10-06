@@ -28,4 +28,4 @@ Q = I / f_rev = 0.0002 A / 378,545 Hz ≈ 0.528 nC
 
 ## Fill Pattern
 
-![NSLS-II fill pattern during 500 mA operations](opts500mA_fillpattern.png)
+![NSLS-II fill pattern during 500 mA operations](ops500mA_fillpattern.png)
