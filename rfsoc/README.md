@@ -1,13 +1,13 @@
 # RFSoC Button Signal Acquisition and Turn-by-Turn Resolution
 
-RFSoC ADC data collected from NSLS-II button signals during normal **500 mA operations**. Measurements include the full fill pattern and a dedicated camshaft bunch capture.
+RFSoC ADC data collected from NSLS-II button signals during normal 500 mA operations. Measurements include the full fill pattern and a dedicated camshaft bunch capture.
 
-The approximate camshaft bunch current is **0.2 mA**, corresponding to **0.528 nC** at a revolution frequency of 378,545 Hz.
+The approximate camshaft bunch current is 0.2 mA, corresponding to 0.528 nC at a revolution frequency of 378,545 Hz.
 
 
 ## Hardware Platform
 
-The measurements were performed using an **NSLS-II-developed RFSoC platform** based on the **Xilinx Zynq UltraScale+ RFSoC Gen 3 ZU47DR**. The board uses the same type of RF connectors as the **ZCU208 evaluation board**.
+The measurements were performed using an NSLS-II-developed RFSoC platform based on the Xilinx Zynq UltraScale+ RFSoC Gen 3 ZU47DR. The board uses the same type of RF connectors as the ZCU208 evaluation board.
 
 | Component | Specification |
 |---|---|
@@ -66,7 +66,7 @@ The ADC text files contain four whitespace-separated columns:
 | 3 | C |
 | 4 | D |
 
-For the DMA capture, each consecutive block of **240 rows** represents one turn. A 1,000-turn acquisition therefore contains **240,000 rows**.
+For the DMA capture, each consecutive block of 240 rows represents one turn. A 1,000-turn acquisition therefore contains 240,000 rows.
 
 Samples are expressed in ADC counts. Lines beginning with `#` are comments or column headers.
 
@@ -74,9 +74,9 @@ Samples are expressed in ADC counts. Lines beginning with `#` are comments or co
 
 For each turn and channel:
 
-1. Calculate the baseline from samples **0–99**.
+1. Calculate the baseline from samples 0–99.
 2. Subtract that baseline from the waveform.
-3. Calculate the root-sum-square (RSS) amplitude over samples **110–150 inclusive**.
+3. Calculate the root-sum-square (RSS) amplitude over samples 110–150 inclusive.
 
 All sample indices are zero-based.
 
@@ -114,4 +114,4 @@ Calculate and plot the turn-by-turn position variation:
 python3 calc_tbt_noise.py adc_camshaftbucket_combined-split-2.2Ghz_LPF.txt
 ```
 
-Keep the data files, scripts, and PNG in the same directory as this README.
+
